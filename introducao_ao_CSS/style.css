@@ -1,0 +1,29 @@
+ h1{
+     background-color: crimson;
+     color: darkred;
+ }
+ 
+ p{
+     color: darkkhaki;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 15px;
+ }
+ #menu{
+    background-color: rgb(18, 94, 194);
+    display: flex;
+ }
+ .botao{
+    background-color: #6C5CE7;
+    color: white;
+    padding: 8px;
+    margin: 10px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+ }
+ .botao:hover{
+    background: linear-gradient(#8425c4, #7314a0, rgb(180, 50, 17));
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+ }

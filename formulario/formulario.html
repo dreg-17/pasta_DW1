@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+    <!--Script de Média-->
+    <script>
+        function calcularMedia() {
+            let nota1 = parseFloat(document.getElementById('idn1').value);
+            let nota2 = parseFloat(document.getElementById('idn2').value);
+            if(isNaN(nota1) || isNaN(nota2)){
+                alert("ERRO: Informe valores válidos!")
+            }else{
+                let media = (nota1 + nota2) / 2;
+                alert("A média é: " + media.toFixed(1));
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Cadastro de Aluno</legend>
+        <form action="api/posturl">
+            <div><!-- input de NOME -->
+                <label for="idnome">Nome: </label> <br>
+                <input type="text" name="nome" id="idnome" minlength="8" required maxlength="30">
+            </div>
+            <br><label for="idemail">Email: </label>
+            <div><!-- Input de EMAIL -->
+                <input type="email" name="Email: " id="idemail">
+            </div>
+            <br><label for="idsenha">Senha:</label>
+            <div><!-- Input de SENHA -->
+                <input type="password" name="Senha: " id="idsenha">
+            </div>
+            <br><label for="ididade">Idade:</label>
+            <div><!-- Input de IDADE -->
+                <input type="number" name="idade" id="ididade" min="0" max="200">
+            </div>
+            <br><label for="idnasc">Nascimento</label>
+            <div><!-- INPUT de NASCIMENTO -->
+                <input type="date" name="nasc" id="idnasc">
+            </div>
+            <br><label for="iddatahora">Data e Hora:</label>
+            <div><!-- INPUT da DATA e HORA -->
+                <input type="datetime-local" name="datahora" id="iddatahora">
+            </div>
+            <br><label for="idtrabalho">Arquivo do Trabalho</label>
+            <div>
+                <input type="file" name="trabalho" id="idtrabalho" accept=".jpeg, .gif, .img, ,jpg, .mp4, .mp3, .wav">
+            </div>
+            <br><br><br><!--Input de CHECKBOX-->
+            <h1>Melhores Shoppings de Manaus</h1>
+            <input type="checkbox" name="shop1" id="" value="Shopping Cidade Leste">
+            <label for="">Shopping Cidade Leste</label>
+            <br>
+            <input type="checkbox" name="shop2" id="" value="Shopping Cidade Nova">
+            <label for="">Shopping Cidade Nova</label><br>
+
+            <input type="checkbox" name="shop3" id="" value="Shopping Via Norte">
+            <label for="">Shopping Via Norte</label>
+            </div>
+            <br><br><br>
+            <div><!--Input de RADIO -->
+                <h2>Turma que vai ganhar o JIMM 2026</h2>
+                <input type="radio" name="vencedora" id="" value="2EMAA">
+                <label for="">2EMAA</label>
+                <br>
+                <input type="radio" name="vencedora" id="" value="2EMBB">
+                <label for="">2EMBB</label>
+                <br>
+                <input type="radio" name="vencedora" id="" value="2EMCC">
+                <label for="">2EMCC</label>
+            </div>
+            <br>
+            <div><!-- Input de DROPDOWN -->
+                <h2>Melhores Comidas/Bebidas na FMM</h2>
+                <select name="" id="">
+                    <option value="" selected disabled>Escolha uma opção</option>
+                    <optgroup label="Comidas"></optgroup>
+                    <option value="Fricasse">Fricassê</option>
+                    <option value="Strogonoff de carne">Strogonoff de carne</option>
+                    <option value="Frango Empanado">Frango Empanado</option>
+                    <optgroup label="Salgados"></optgroup>
+                    <option value="Enroladinho de Salsicha">Enroladinho de Salsicha</option>
+                    <option value="Mini Pizza">Mini Pizza</option>
+                    <option value="Jacaré">Jacaré</option>
+                    <optgroup label="Sucos"></optgroup>
+                    <option value="Suco de Abacaxi">Suco de Abacaxi</option>
+                    <option value="Suco de Manga">Suco de Manga</option>
+                    <option value="Suco de Água">Suco de Água</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <div style="background-color: crimson; padding: 20px;">
+                    <label for="">Informe nota 1</label><br>
+                    <input type="number" name="n1" id="idn1" min="0" max="10" step="0.1"><br>
+                    <label for="">Informe nota 2</label><br>
+                    <input type="number" name="n2" id="idn2" min="0" max="10" step="0.1"><br>
+                    <br>
+                    <input type="button" value="Calcular" onclick="calcularMedia()">
+                </div>
+            </div>
+            <br><!-- Input de SUBMIT -->
+            <input type="submit" value="Cadastro">
+        </form>
+    </fieldset>
+</body>
+
+</html>
